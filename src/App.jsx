@@ -11,12 +11,13 @@ import ContactForm from "./components/contactForm.jsx";
 function App() {
   return (
     <BrowserRouter>
+    <Nav />
       <Routes>
+     
         <Route
           path="/"
           element={
-            <>
-              <Nav />
+            <>  
               <Hero>
                 <HeroFeat />
               </Hero>
@@ -26,6 +27,7 @@ function App() {
             </>
           }
         ></Route>
+        <Route path="/product" element={<ProductOverviews  />}></Route>
       </Routes>
     </BrowserRouter>
   );

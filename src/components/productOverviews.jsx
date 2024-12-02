@@ -33,19 +33,19 @@ const product = {
   ],
   images: [
     {
-      src: "https://tailwindui.com/plus/img/ecommerce-images/product-page-02-secondary-product-shot.jpg",
+      src: "https://www.chickenfans.com/wp-content/uploads/2023/09/vitamin-d-for-chickens.jpg",
       alt: "Two each of gray, white, and black shirts laying flat.",
     },
     {
-      src: "https://tailwindui.com/plus/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg",
+      src: "https://media.istockphoto.com/id/1217649450/photo/chicken-or-hen-on-a-green-meadow.jpg?s=612x612&w=0&k=20&c=zRlZTkwoc-aWb3kI10OqlRLbiQw3R3_KUIchNVFgYgw=",
       alt: "Model wearing plain black basic tee.",
     },
     {
-      src: "https://tailwindui.com/plus/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg",
+      src: "https://sidai.com/images/2018/10/30/sidai-poultry-vitamins.png",
       alt: "Model wearing plain gray basic tee.",
     },
     {
-      src: "https://tailwindui.com/plus/img/ecommerce-images/product-page-02-featured-product-shot.jpg",
+      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMHY2fVyqXFC9Ertj4wOhVqypx_0TWGg02qQ&s",
       alt: "Model wearing plain white basic tee.",
     },
   ],
@@ -86,7 +86,7 @@ export default function ProductOverviews() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
   return (
-    <div className="bg-gradient-inverse">
+    <div className="pt-12 bg-gradient-inverse">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol

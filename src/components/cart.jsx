@@ -4,8 +4,6 @@ import { useCart } from '../providers/cart.provider.jsx'
 
 
 export default function Cart({open,setOpen}) {
-  
-
 const {cart, removeItemFromCart} = useCart()
 const products = cart
   return (
