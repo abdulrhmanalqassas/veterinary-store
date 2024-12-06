@@ -1,4 +1,4 @@
-import cover from "../assets/cover.png";
+import cover from "../assets/cover.jpg";
 import ProductCard from "./productCard";
 // import { DefaultAccordion } from "./test";
 const products = [

@@ -1,4 +1,4 @@
-import cover from "../assets/cover.png";
+import cover from "../assets/cover.jpg";
 function Hero({ children }) {
   return (
     <section

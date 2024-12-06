@@ -6,32 +6,8 @@ export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
 
   return (
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
-
-      
-<div className="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="my-accordion-2" defaultChecked />
-  <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
-  <div className="collapse-content">
-    <p>hello</p>
-  </div>
-</div>
-<div className="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="my-accordion-2" />
-  <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
-  <div className="collapse-content">
-    <p>hello</p>
-  </div>
-</div>
-<div className="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="my-accordion-2" />
-  <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
-  <div className="collapse-content">
-    <p>hello</p>
-  </div>
-</div>
-
-
+    <div className="isolate bg-white px-6 py-6 sm:py-16 lg:px-6">
+     
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"

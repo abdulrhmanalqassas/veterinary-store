@@ -88,7 +88,7 @@ export default function ProductOverviews() {
   return (
     <div className="pt-12 bg-gradient-inverse">
       <div className="pt-6">
-        <nav aria-label="Breadcrumb">
+        {/* <nav aria-label="Breadcrumb">
           <ol
             role="list"
             className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
@@ -125,7 +125,7 @@ export default function ProductOverviews() {
               </a>
             </li>
           </ol>
-        </nav>
+        </nav> */}
 
         {/* Image gallery */}
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
