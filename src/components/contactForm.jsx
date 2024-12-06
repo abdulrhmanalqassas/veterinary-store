@@ -25,7 +25,7 @@ export default function ContactForm() {
           Contact sales
         </h2>
         <p className="mt-2 text-lg/8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
+        ho  lets start contact with us 
         </p>
       </div>
       <form className="mx-auto mt-16 max-w-xl sm:mt-20">
