@@ -8,9 +8,9 @@ export default {
     },
     
      backgroundImage: {
-      'custom-gradient': 'linear-gradient(to top,rgba(58, 85, 148,1)  1%, rgba(0, 0, 0, 1) 70%, transparent 70%, transparent  )',
-      'gradient-inverse': 'linear-gradient(to top,rgba(17, 23, 58,1)  1%, rgba(58, 85, 148, 1) 70%  )',
-      'icon-gradient': 'linear-gradient(315deg, rgba(58, 85, 148,1) 11.2%, rgb(17, 23, 58) 78.9%)',
+      'custom-gradient': 'linear-gradient(to top,rgba(244, 164, 96,1)  1%, rgba(255, 249, 196, 1) 70%, transparent 70%, transparent  )',
+      'gradient-inverse': 'linear-gradient(to top,rgba(255, 249, 196,1)  1%, rgba(244, 164, 96, 1) 70%  )',
+      'icon-gradient': 'linear-gradient(315deg, rgba(244, 164, 96,1) 11.2%, rgb(255, 249, 196) 78.9%)',
 
     },},
   },

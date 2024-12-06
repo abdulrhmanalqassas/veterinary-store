@@ -1,8 +1,8 @@
 import cover from "../assets/react.svg";
-
+import icon1 from "../assets/icon1.svg";
 function HeroFeat() {
   return (
-    // <div className=" flex-none flex justify-around items-center p-4 bg-custom-gradient w-full text-white ">
+    // <div className=" flex-none flex justify-around items-center p-4 bg-custom-gradient w-full text-black  ">
     //   <div className="flex flex-col items-center h-full">
     //     <div className="w-28 h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
     //       <img src={cover} alt="Trust Icon" className="w-16 h-16" />
@@ -46,7 +46,7 @@ function HeroFeat() {
     //     <p className="text-center">Your support description text goes here.</p>
     //   </div>
     // </div>
-    // <div className="flex-none flex flex-col md:flex-row justify-around items-center p-4 bg-custom-gradient w-full text-white">
+    // <div className="flex-none flex flex-col md:flex-row justify-around items-center p-4 bg-custom-gradient w-full text-black ">
     //   <div className="flex flex-col items-center mb-4 md:mb-0">
     //     <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
     //       <img
@@ -111,12 +111,12 @@ function HeroFeat() {
     //     </p>
     //   </div>
     // </div>
-    <div className="flex flex-wrap justify-around items-center p-4 bg-custom-gradient w-full text-white">
+    <div className="flex flex-wrap justify-around items-center p-4 bg-custom-gradient w-full text-black ">
       <div className="w-1/2 sm:w-1/4 p-2">
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
             <img
-              src={cover}
+              src={icon1}
               alt="Trust Icon"
               className="w-12 h-12 md:w-16 md:h-16"
             />
@@ -134,7 +134,7 @@ function HeroFeat() {
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
             <img
-              src={cover}
+              src={icon1}
               alt="Quality Icon"
               className="w-12 h-12 md:w-16 md:h-16 drop-shadow-[2px_2px_20px_rgba(0,216,255,1)]"
             />
@@ -152,7 +152,7 @@ function HeroFeat() {
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
             <img
-              src={cover}
+              src={icon1}
               alt="Innovation Icon"
               className="w-12 h-12 md:w-16 md:h-16"
             />
@@ -170,7 +170,7 @@ function HeroFeat() {
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
             <img
-              src={cover}
+              src={icon1}
               alt="Support Icon"
               className="w-12 h-12 md:w-16 md:h-16"
             />

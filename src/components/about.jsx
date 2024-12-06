@@ -24,7 +24,7 @@ export default function About() {
               <path d="M100 200V.5M.5 .5H200" fill="none" />
             </pattern>
           </defs>
-          <svg x="50%" y={-1} className="overflow-visible fill-blue-900">
+          <svg x="50%" y={-1} className="overflow-visible fill-orange-400">
             <path
               d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
               strokeWidth={0}
@@ -42,11 +42,11 @@ export default function About() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base/7 font-semibold text-white">About us</p>
-              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-slate-100 sm:text-5xl">
+              <p className="text-base/7 font-semibold text-black">About us</p>
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-black sm:text-5xl">
                 Who are we?
               </h1>
-              <p className="mt-6 text-xl/8 text-white">
+              <p className="mt-6 text-xl/8 text-black">
                 Globador is a fast-growing Egyptian company specializing in
                 veterinary products. The company sets ambitious goals to become
                 one of the leading companies in the animal health industry.
@@ -66,7 +66,7 @@ export default function About() {
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
-            <div className="max-w-xl text-base/7 text-white lg:max-w-lg">
+            <div className="max-w-xl text-base/7 text-black lg:max-w-lg">
               <p>
                 By offering distinctive and high-quality veterinary products,
                 Globador aims to make a significant impact on the growth and
@@ -82,7 +82,7 @@ export default function About() {
                     className="mt-1 size-5 flex-none text-indigo-600"
                   />
                   <span>
-                    <strong className="font-semibold text-white">
+                    <strong className="font-semibold text-black">
                       Push to deploy.
                     </strong>{" "}
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -109,7 +109,7 @@ export default function About() {
                     className="mt-1 size-5 flex-none text-indigo-100"
                   />
                   <span>
-                    <strong className="font-semibold text-white">
+                    <strong className="font-semibold text-black">
                       Database backups.
                     </strong>{" "}
                     Ac tincidunt sapien vehicula erat auctor pellentesque
@@ -126,7 +126,7 @@ export default function About() {
                 et ut. Ac lorem vel integer orci.
               </p> */}
 
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-white">
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-black">
                 Our team:
               </h2>
               <p className="mt-6">
@@ -137,7 +137,7 @@ export default function About() {
                 excellence propel them forward, fostering a culture of
                 determination, collaboration, and continuous improvement.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-white">
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-black">
                 Our vision:
               </h2>
               <p className="mt-6">
@@ -148,7 +148,7 @@ export default function About() {
                 to build long-term relationships with its customers and create a
                 positive impact on the overall animal production sector.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-white">
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-black">
                 Our mission:
               </h2>
               <p className="mt-6">
