@@ -35,10 +35,10 @@ export default function Nav() {
   return (
     <Disclosure
       as="nav"
-      className={`fixed w-full z-10 top-0 py-1  custom-transition  ${
+      className={` fixed w-full z-10 top-0 py-1  custom-transition  ${
         isScrolled
-          ? "md:bg-icon-gradient md:text-white"
-          : " md:bg-transparent md:text-black"
+          ? "bg-white sm:bg-icon-gradient md:text-white"
+          : "bg-white sm:bg-transparent md:text-black"
       }`}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
