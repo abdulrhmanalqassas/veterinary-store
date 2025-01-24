@@ -4,16 +4,21 @@ import "./App.css";
 import Nav from "./components/nav.jsx";
 import ProductOverviews from "./components/productOverviews.jsx";
 import Home from "./pages/home.jsx";
+
 function App() {
   return (
     <BrowserRouter basename="/veterinary-store">
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/product" element={<ProductOverviews />}></Route>
+        <Route path="/" element={<Home  />} />
+        <Route 
+          path="/product/:productName" 
+          element={<ProductOverviews />} 
+        />
       </Routes>
     </BrowserRouter>
   );
 }
+
 
 export default App;

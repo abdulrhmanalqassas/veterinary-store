@@ -7,12 +7,13 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Cart from "./cart";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: true },
-  { name: "Team", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
+  { name: "home", href: "/", current: true },
+  // { name: "Team", href: "#", current: false },
+  // { name: "Projects", href: "#", current: false },
+  // { name: "Calendar", href: "#", current: false },
 ];
 
 function classNames(...classes) {
@@ -72,25 +73,24 @@ export default function Nav() {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     aria-current={item.current ? "page" : undefined}
                     className={classNames(
                       item.current
-                        ? "bg-gray-900 text-black"
+                        ? "bg-gray-900 text-white"
                         : " hover:bg-gray-700 hover:text-black",
                       "rounded-md px-3 py-2 text-sm font-medium"
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
 
-            {/* Profile dropdown */}
-            <dev className="relative ml-3">
+            {/* <dev className="relative ml-3">
               {" "}
               <button
                 onClick={() => setIsCartOpen(true)}
@@ -98,7 +98,7 @@ export default function Nav() {
               >
                 Open Cart
               </button>
-            </dev>
+            </dev> */}
           </div>
         </div>
       </div>
