@@ -47,7 +47,7 @@ export default function Nav() {
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <Cart open={isCartOpen} setOpen={setIsCartOpen} />
             {/* Mobile menu button*/}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2  hover:bg-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            {/* <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2  hover:bg-gray-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
               <Bars3Icon
@@ -58,15 +58,17 @@ export default function Nav() {
                 aria-hidden="true"
                 className="hidden h-6 w-6 group-data-[open]:block"
               />
-            </DisclosureButton>
+            </DisclosureButton> */}
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
-              />
+              <Link to={"/"}>
+                <img
+                  alt="Your Company"
+                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                  className="h-8 w-auto"
+                />
+              </Link>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

@@ -111,7 +111,7 @@ function HeroFeat() {
     //     </p>
     //   </div>
     // </div>
-    <div className="flex flex-wrap justify-around items-center p-4 bg-custom-gradient w-full text-black ">
+    <div className="hidden  md:flex flex-wrap justify-around items-center p-4 bg-custom-gradient w-full text-black ">
       <div className="w-1/2 sm:w-1/4 p-2">
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
