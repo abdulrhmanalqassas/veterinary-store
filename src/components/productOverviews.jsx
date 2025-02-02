@@ -6,12 +6,45 @@ import cover from "../assets/cover.jpg";
 export default function ProductOverviews() {
   const location = useLocation();
   const { productName } = useParams();
-  
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   // Assuming the products are loaded from the JSON file
   const products = location.state?.products || [];
-  const product = products.find(p => 
-    p.name.replace(/\s+/g, '-').toLowerCase() === productName
+  const product = products.find(
+    (p) => p.name.replace(/\s+/g, "-").toLowerCase() === productName
   );
+  // Convert Google Drive sharing URL to direct image URL
+  // const getDirectUrl = (url) => {
+  //   try {
+  //     // Handle different types of Google Drive URLs
+  //     if (url.includes("drive.google.com/file/d/")) {
+  //       // Format: https://drive.google.com/file/d/FILE_ID/view
+  //       const fileId = url.split("/file/d/")[1].split("/")[0];
+  //       return `https://drive.google.com/uc?export=view&id=${fileId}`;
+  //     } else if (url.includes("drive.google.com/open?id=")) {
+  //       // Format: https://drive.google.com/open?id=FILE_ID
+  //       const fileId = url.split("open?id=")[1];
+  //       return `https://drive.google.com/uc?export=view&id=${fileId}`;
+  //     }
+  //     return url;
+  //   } catch (err) {
+  //     setError("Invalid Drive URL format");
+  //     return null;
+  //   }
+  // };
+
+  // const handleImageLoad = () => {
+  //   setIsLoading(false);
+  // };
+
+  // const handleImageError = () => {
+  //   setError(
+  //     "Failed to load image. Make sure the Drive link is publicly accessible."
+  //   );
+  //   setIsLoading(false);
+  // };
+
+  const directUrl = product.images[0];
 
   if (!product) {
     return <div className="text-black">Product not found</div>;
@@ -19,15 +52,43 @@ export default function ProductOverviews() {
 
   return (
     <div className="pt-12 bg-gradient-inverse">
+      {console.log(">>>>>>>> img link ", product.images[0])}
       <div className="pt-6">
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-          <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+          <div className="aspect-h-4 aspect-w-3  overflow-hidden rounded-lg ">
+            <img
+              alt={"prodect image"}
+              src={directUrl}
+              className="mb-1 h-full w-full object-cover object-center"
+            />
+          </div>
+          <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+            {/* <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+              {directUrl && (
+                <img
+                  src={directUrl}
+                  alt={product.name}
+                  className="h-full w-full object-cover object-center"
+             
+                  style={{ display: isLoading ? "none" : "block" }}
+                />
+              )}
+            </div> */}
+            {/* <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+              <img
+                alt={product.name}
+                src={cover}
+                className="h-full w-full object-cover object-center"
+              />
+            </div> */}
+          </div>
+          {/* <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
             <img
               alt={product.name}
               src={cover}
               className="h-full w-full object-cover object-center"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
@@ -71,7 +132,11 @@ export default function ProductOverviews() {
               <h3 className="text-sm font-medium text-black">Ingredients</h3>
               <div className="mt-4 space-y-6">
                 <ul className="text-sm text-black">
-                  {Object.entries(product.ingredients_per_liter || product.ingredients_per_kg || product.ingredients_per_100_ml).map(([ingredient, amount]) => (
+                  {Object.entries(
+                    product.ingredients_per_liter ||
+                      product.ingredients_per_kg ||
+                      product.ingredients_per_100_ml
+                  ).map(([ingredient, amount]) => (
                     <li key={ingredient}>
                       {ingredient}: {amount}
                     </li>
@@ -79,8 +144,6 @@ export default function ProductOverviews() {
                 </ul>
               </div>
             </div>
-
-       
           </div>
         </div>
       </div>
