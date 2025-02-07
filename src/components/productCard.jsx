@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import cover from "../assets/cover.jpg";
+import holder from "../assets/holder.svg";
 
 export default function ProductCard({ product, products }) {
   return (
@@ -7,7 +7,7 @@ export default function ProductCard({ product, products }) {
       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-800 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <img
           alt={product.name}
-          src={product.images}
+          src={product.images == "" ? holder :  product.images}
           className="h-full w-full object-cover object-center lg:h-full lg:w-full"
         />
       </div>

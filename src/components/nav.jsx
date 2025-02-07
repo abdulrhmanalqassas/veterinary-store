@@ -7,6 +7,7 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Cart from "./cart";
+import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 const navigation = [
@@ -63,11 +64,7 @@ export default function Nav() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
               <Link to={"/"}>
-                <img
-                  alt="Your Company"
-                  src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                  className="h-8 w-auto"
-                />
+                <img alt="Your Company" src={logo} className="h-8 w-auto" />
               </Link>
             </div>
           </div>
