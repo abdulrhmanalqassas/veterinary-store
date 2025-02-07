@@ -96,7 +96,9 @@ export default function ProductLists() {
   useEffect(() => {
     const fetchProducts = async () => {
       // const fileId = "145qTL-Moux7j9n-v7zM-0GDSQoY0Izw9";
-      const url = "https://api.jsonbin.io/v3/qs/679fc148ad19ca34f8f8a24a";
+      // const url = "https://api.jsonbin.io/v3/qs/679fc148ad19ca34f8f8a24a";
+      const url =
+        "https://api.myjson.online/v1/records/89af331c-3cf8-47d4-bc1c-5dc2df55a2bb";
 
       try {
         setIsLoading(true);
@@ -107,8 +109,8 @@ export default function ProductLists() {
         }
 
         const data = await response.json();
-        // console.log(">>>>>D>D>>D>D>D>D>DD>D>D>D>D>D>", data);
-        setProducts(data.record.products);
+        console.log(">>>>>D>D>>D>D>D>D>DD>D>D>D>D>D>", data);
+        setProducts(data.data.products);
 
         setIsLoading(false);
       } catch (error) {
