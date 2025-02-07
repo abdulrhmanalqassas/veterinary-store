@@ -1,5 +1,6 @@
 import cover from "../assets/react.svg";
-import icon1 from "../assets/icon1.svg";
+// import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 function HeroFeat() {
   return (
     <div className="hidden  md:flex flex-wrap justify-around items-center p-4 bg-custom-gradient w-full text-black ">
@@ -7,7 +8,7 @@ function HeroFeat() {
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
             <img
-              src={icon1}
+              src={logo}
               alt="Trust Icon"
               className="w-12 h-12 md:w-16 md:h-16"
             />
@@ -25,9 +26,9 @@ function HeroFeat() {
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
             <img
-              src={icon1}
+              src={logo}
               alt="Quality Icon"
-              className="w-12 h-12 md:w-16 md:h-16 drop-shadow-[2px_2px_20px_rgba(0,216,255,1)]"
+              className="w-12 h-12 md:w-16 md:h-16 "
             />
           </div>
           <p className="mt-2 md:mt-4 text-center font-bold drop-shadow-[5px_5px_5px_rgba(125,125,125,0.8)]">
@@ -43,7 +44,7 @@ function HeroFeat() {
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
             <img
-              src={icon1}
+              src={logo}
               alt="Innovation Icon"
               className="w-12 h-12 md:w-16 md:h-16"
             />
@@ -61,7 +62,7 @@ function HeroFeat() {
         <div className="flex flex-col items-center h-full">
           <div className="w-20 h-20 md:w-28 md:h-28 bg-icon-gradient rounded-full flex items-center justify-center drop-shadow-[2px_2px_5px_rgba(125,125,125,0.6)]">
             <img
-              src={icon1}
+              src={logo}
               alt="Support Icon"
               className="w-12 h-12 md:w-16 md:h-16"
             />
