@@ -2,7 +2,7 @@ import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { useParams, useLocation } from "react-router-dom";
 import cover from "../assets/cover.jpg";
-
+import holder from "../assets/holder.svg";
 export default function ProductOverviews() {
   const location = useLocation();
   const { productName } = useParams();
@@ -58,7 +58,7 @@ export default function ProductOverviews() {
           <div className="aspect-h-4 aspect-w-3  overflow-hidden rounded-lg ">
             <img
               alt={"prodect image"}
-              src={directUrl}
+              src={directUrl == "" ? holder : product.images[0]}
               className="mb-1 h-full w-full object-cover object-center"
             />
           </div>

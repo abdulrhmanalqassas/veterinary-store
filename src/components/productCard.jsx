@@ -8,7 +8,7 @@ export default function ProductCard({ product, products }) {
         <img
           alt={product.name}
           src={product.images == "" ? holder :  product.images}
-          className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+          className="h-full w-full object-cover  object-center lg:h-full lg:w-full"
         />
       </div>
       <div className="mt-4 flex justify-between">
