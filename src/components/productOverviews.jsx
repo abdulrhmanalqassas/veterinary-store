@@ -115,20 +115,9 @@ export default function ProductOverviews() {
           </div>
 
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-            <div>
-              <h3 className="text-sm font-medium text-black">Indications</h3>
-              <div className="mt-4">
-                <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                  {product.indications.map((indication, index) => (
-                    <li key={index} className="text-black">
-                      {indication}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+           
 
-            <div className="mt-10">
+            <div className="">
               <h3 className="text-sm font-medium text-black">Ingredients</h3>
               <div className="mt-4 space-y-6">
                 <ul className="text-sm text-black">
@@ -139,6 +128,19 @@ export default function ProductOverviews() {
                   ).map(([ingredient, amount]) => (
                     <li key={ingredient}>
                       {ingredient}: {amount}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-10">
+              <h3 className="text-sm font-medium text-black">Indications</h3>
+              <div className="mt-4">
+                <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
+                  {product.indications.map((indication, index) => (
+                    <li key={index} className="text-black">
+                      {indication}
                     </li>
                   ))}
                 </ul>

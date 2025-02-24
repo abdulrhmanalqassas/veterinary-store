@@ -5,6 +5,7 @@ import ProductOverviews from "./components/productOverviews.jsx";
 import Home from "./pages/home.jsx";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import Footer from "./components/footer.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product/:productName" element={<ProductOverviews />} />
       </Routes>
+      <Footer />
     </HashRouter>
   );
 }

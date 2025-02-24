@@ -5,9 +5,38 @@ import { Field, Label, Switch } from "@headlessui/react";
 export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          service_id: "your_service_id",
+          template_id: "your_template_id",
+          user_id: "your_user_id",
+          template_params: data,
+        }),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("An error occurred while sending the message.");
+    }
+  };
+
   return (
-    <div className="isolate bg-white px-6 py-6 sm:py-16 lg:px-6">
-     
+    <div className="isolate bg-gradient-inverse px-6 py-6 sm:py-16 lg:px-6">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
@@ -25,10 +54,10 @@ export default function ContactForm() {
           Contact sales
         </h2>
         <p className="mt-2 text-lg/8 text-gray-600">
-        ho  lets start contact with us 
+          ho lets start contact with us
         </p>
       </div>
-      <form className="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form className="mx-auto mt-16 max-w-xl sm:mt-20" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div className="sm:col-span-2">
             <label
@@ -85,10 +114,6 @@ export default function ContactForm() {
                   <option>CA</option>
                   <option>EU</option>
                 </select>
-                {/* <ChevronDownIcon
-                  aria-hidden="true"
-                  className="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400"
-                /> */}
               </div>
               <input
                 id="phone-number"
@@ -141,7 +166,7 @@ export default function ContactForm() {
         </div>
         <div className="mt-10">
           <button
-            // type="submit"
+            type="submit"
             className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Lets talk

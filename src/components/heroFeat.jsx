@@ -1,4 +1,3 @@
-import cover from "../assets/react.svg";
 // import logo from "../assets/logo.svg";
 import logo from "../assets/logo.png";
 function HeroFeat() {
@@ -35,7 +34,7 @@ function HeroFeat() {
             AND QUALITY
           </p>
           <p className="text-center text-sm md:text-base">
-            quality products and services guaranteed.{" "}
+            quality products and services guaranteed.
           </p>
         </div>
       </div>
