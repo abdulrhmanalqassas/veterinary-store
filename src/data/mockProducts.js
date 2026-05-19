@@ -1,0 +1,86 @@
+import holder from "../assets/holder.svg";
+
+export const mockProducts = [
+  {
+    name: "G-FORT",
+    category: "Immune Stimulant",
+    ingredients_per_liter: {
+      "Oregano oil": "80000 mg",
+      Lectin: "150000 mg",
+      "Mushroom extract": "50000 mg",
+      "Echinacea purpura extract": "25000 mg",
+      "Star anise oil": "25000 mg",
+      "Zinc methionine": "20000 mg",
+      "Vitamin E": "5000 mg",
+      "Sodium selenite": "1000 mg",
+      Excipient: "up to 1 liter",
+    },
+    indications: [
+      "Builds up immunity in birds naturally.",
+      "Helps to resist secondary diseases.",
+      "Helps to resist viral diseases.",
+      "Provides resistance power against diseases and stress in poultry.",
+    ],
+    dose: "0.5 - 1 ml/Liter of drinking water",
+    pack: "Plastic bottle of 500 ML",
+    images: [holder],
+  },
+  {
+    name: "BIOJECT",
+    category: "Nutritional Supplement",
+    ingredients_per_100_ml: {
+      "Biological extracts": "Mixture",
+      Betaglucan: "",
+      "Multi-vitamins": "",
+    },
+    indications: [
+      "Provides complete nutritional supplement to optimize growth rate.",
+      "Enhances biological functions and improves productive performance.",
+      "Boosts immune response.",
+    ],
+    dose: "100 ml/4 ton Bwt",
+    pack: "Glass bottle of 100 ML",
+    images: [holder],
+  },
+  {
+    name: "G-TONIC",
+    category: "Tonic",
+    ingredients_per_liter: {
+      "Sorbitol liquid 70%": "200 gm",
+      "Beetroot extract": "50 gm",
+      "D-L Methionine": "25 gm",
+      "L-Lysine": "25 gm",
+      Nicotinamide: "25 gm",
+      "L-Carnitine": "10 gm",
+      Silymarin: "10 gm",
+    },
+    indications: [
+      "Enhances liver functions.",
+      "Protects the liver from the accumulation of toxins and fats.",
+      "Improves general health and productivity.",
+    ],
+    dose: "0.5 - 1 ml/Liter of drinking water",
+    pack: "Plastic bottle of 1 liter",
+    images: [holder],
+  },
+  {
+    name: "CLONET",
+    category: "Anti-diarrheal",
+    ingredients_per_kg: {
+      Metronidazole: "60 gm",
+      "Copper Sulphate": "25 gm",
+      "Garlic oil": "80 gm",
+      "Thyme oil": "20 gm",
+      MannanOligosaccharide: "100 gm",
+      "Lactic acid": "55 gm",
+    },
+    indications: [
+      "Effective against serious enteric pathogens.",
+      "Recommended for gastro-intestinal infections.",
+      "Boosts the immune system during severe enteric infections.",
+    ],
+    dose: "0.5 gm/Liter of drinking water",
+    pack: "Plastic pack of 250 GM",
+    images: [holder],
+  },
+];

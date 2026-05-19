@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Field, Label, Switch } from "@headlessui/react";
+import { sendContactMessage } from "../network/mockRequests";
 
 export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
@@ -11,18 +12,7 @@ export default function ContactForm() {
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          service_id: "your_service_id",
-          template_id: "your_template_id",
-          user_id: "your_user_id",
-          template_params: data,
-        }),
-      });
+      const response = await sendContactMessage(data);
 
       if (response.ok) {
         alert("Message sent successfully!");

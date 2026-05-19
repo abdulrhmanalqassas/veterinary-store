@@ -84,9 +84,8 @@
 //   );
 // }
 import { useEffect, useState } from "react";
-import cover from "../assets/cover.jpg";
 import ProductCard from "./productCard";
-import { use } from "react";
+import { getProducts } from "../network/mockRequests";
 
 export default function ProductLists() {
   const [products, setProducts] = useState([]);
@@ -95,26 +94,12 @@ export default function ProductLists() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      // const fileId = "145qTL-Moux7j9n-v7zM-0GDSQoY0Izw9";
-      // const url = "https://api.jsonbin.io/v3/qs/679fc148ad19ca34f8f8a24a";
-      const url =
-        "https://api.myjson.online/v1/records/89af331c-3cf8-47d4-bc1c-5dc2df55a2bb";
-
       try {
         setIsLoading(true);
-        const response = await fetch(url);
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log(">>>>>D>D>>D>D>D>D>DD>D>D>D>D>D>", data);
-        setProducts(data.data.products);
-
+        const data = await getProducts();
+        setProducts(data.products);
         setIsLoading(false);
       } catch (error) {
-        // console.error("Error fetching the JSON file:", error);
         setError(error.message);
         setIsLoading(false);
       }
